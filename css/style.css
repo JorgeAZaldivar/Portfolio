@@ -1,0 +1,1604 @@
+/* ==========================================================
+   JORGE ZALDIVAR — PORTFOLIO
+   Simple / clean / professional
+   ========================================================== */
+
+
+/* =========================================================
+   GLOBAL DESIGN VARIABLES
+   Dark Navy / Slate Professional Theme
+   ========================================================= */
+
+:root {
+
+    /* Main page background
+       Dark navy instead of pure black */
+    --background: #0b111a;
+
+    /* Main cards / content surfaces */
+    --surface: #101822;
+
+    /* Slightly lighter secondary surfaces */
+    --surface-soft: #141e2a;
+
+    /* Primary text */
+    --text: #f1f5f9;
+
+    /* Secondary / description text */
+    --text-soft: #94a3b8;
+
+    /* Subtle blue-gray borders */
+    --border: #1e2b3a;
+
+    /* Main blue accent */
+    --accent: #38bdf8;
+
+    /* Green used for successful / implemented items */
+    --success: #4ade80;
+
+    /* Compatibility variables used throughout the existing layout */
+    --secondary: #cbd5e1;
+    --light-text: #64748b;
+    --dark: #172131;
+    --green: #4ade80;
+
+    /* Houston Christian University accent */
+    --hcu-orange: #f97316;
+
+    /* Website maximum width */
+    --max-width: 1180px;
+}
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: var(--background);
+    color: var(--text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    line-height: 1.65;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(11, 17, 26, 0.94);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.navbar {
+    max-width: var(--max-width);
+    height: 82px;
+
+    margin: auto;
+    padding: 0 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr;
+
+    align-items: center;
+}
+
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+
+    gap: 34px;
+}
+
+
+.nav-links a {
+    color: var(--secondary);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 0.1em;
+
+    transition: color 0.2s ease;
+}
+
+
+.nav-links a:hover {
+    color: var(--text);
+}
+
+
+.nav-name {
+    justify-self: end;
+
+    font-size: 0.95rem;
+    font-weight: 650;
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.hero {
+    max-width: var(--max-width);
+
+    min-height: calc(100vh - 82px);
+
+    margin: auto;
+
+    padding: 90px 45px 110px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.25fr
+        0.75fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+.hero-content {
+    max-width: 720px;
+}
+
+
+.eyebrow {
+    margin-bottom: 22px;
+
+    color: var(--secondary);
+
+    font-size: 0.68rem;
+
+    font-weight: 650;
+
+    letter-spacing: 0.15em;
+}
+
+
+.hero h1 {
+    font-size:
+        clamp(3.2rem, 5.4vw, 5.5rem);
+
+    line-height: 1.04;
+
+    letter-spacing: -0.055em;
+
+    font-weight: 650;
+}
+
+
+.hero h1 span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--secondary);
+
+    font-weight: 450;
+}
+
+
+.hero-description {
+    max-width: 620px;
+
+    margin-top: 32px;
+
+    color: var(--secondary);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.hero-actions {
+    margin-top: 34px;
+
+    display: flex;
+
+    gap: 11px;
+}
+
+
+.button {
+    min-height: 46px;
+
+    padding: 0 19px;
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 3px;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+
+.button-dark {
+    background: var(--dark);
+
+    color: white;
+
+    border: 1px solid var(--dark);
+}
+
+
+.button-dark:hover {
+    background: #353b38;
+}
+
+
+.button-light {
+    background: transparent;
+
+    border: 1px solid #c4c6c2;
+}
+
+
+.button-light:hover {
+    background: var(--surface);
+}
+
+
+/* ---------- AVAILABILITY ---------- */
+
+.availability {
+    margin-top: 27px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--secondary);
+
+    font-size: 0.75rem;
+}
+
+
+.availability span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+}
+
+
+/* ---------- PROFESSIONAL LINKS ---------- */
+
+.professional-links {
+    margin-top: 21px;
+
+    display: flex;
+
+    gap: 23px;
+}
+
+
+.professional-links a {
+    color: var(--secondary);
+
+    font-size: 0.76rem;
+
+    font-weight: 600;
+}
+
+
+.professional-links a:hover {
+    color: var(--text);
+}
+
+
+/* ==========================================================
+   PORTRAIT
+   ========================================================== */
+
+.portrait-container {
+    max-width: 370px;
+
+    justify-self: end;
+}
+
+
+.portrait {
+    width: 100%;
+
+    height: 475px;
+
+    object-fit: cover;
+
+    object-position: center 25%;
+
+    border: 1px solid var(--border);
+}
+
+
+.portrait-caption {
+    padding: 15px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.portrait-caption strong {
+    font-size: 0.72rem;
+}
+
+
+.portrait-caption span {
+    color: var(--secondary);
+
+    font-size: 0.68rem;
+
+    text-align: right;
+}
+
+
+/* ==========================================================
+   SHARED SECTIONS
+   ========================================================== */
+
+.section {
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 115px 45px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.section-title {
+    margin-bottom: 55px;
+
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.section-number {
+    color: var(--light-text);
+
+    font-size: 0.65rem;
+}
+
+
+.section-label {
+    color: var(--secondary);
+
+    font-size: 0.67rem;
+
+    font-weight: 650;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* ==========================================================
+   ABOUT
+   ========================================================== */
+
+.about-layout {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 100px;
+}
+
+
+.about-layout h2 {
+    max-width: 520px;
+
+    font-size:
+        clamp(2.2rem, 4vw, 3.5rem);
+
+    line-height: 1.12;
+
+    letter-spacing: -0.045em;
+
+    font-weight: 600;
+}
+
+
+.about-description {
+    max-width: 560px;
+}
+
+
+.about-description p {
+    margin-bottom: 19px;
+
+    color: var(--secondary);
+}
+
+
+/* ---------- SKILLS ---------- */
+
+.skills {
+    margin-top: 75px;
+
+    padding-top: 35px;
+
+    border-top: 1px solid var(--border);
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1.5fr;
+
+    gap: 50px;
+}
+
+
+.skills div > p {
+    margin-bottom: 14px;
+
+    color: var(--light-text);
+
+    font-size: 0.62rem;
+
+    font-weight: 650;
+
+    letter-spacing: 0.12em;
+}
+
+
+.skills span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--secondary);
+
+    font-size: 0.85rem;
+}
+
+
+/* ==========================================================
+   PROJECTS INTRO
+   ========================================================== */
+
+.projects-introduction {
+    max-width: 650px;
+
+    margin-bottom: 60px;
+}
+
+
+.projects-introduction h2 {
+    font-size:
+        clamp(3rem, 5vw, 4.7rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.055em;
+
+    font-weight: 600;
+}
+
+
+.projects-introduction > p {
+    max-width: 560px;
+
+    margin-top: 22px;
+
+    color: var(--secondary);
+}
+
+
+/* ==========================================================
+   PROJECT
+   ========================================================== */
+
+.project {
+    padding: 60px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        90px
+        1fr;
+
+    gap: 30px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.project:last-child {
+    border-bottom: 1px solid var(--border);
+}
+
+
+.project-index {
+    color: var(--light-text);
+
+    font-size: 0.7rem;
+}
+
+
+.project-content {
+    max-width: 900px;
+}
+
+
+.project-category {
+    margin-bottom: 13px;
+
+    color: var(--secondary);
+
+    font-size: 0.62rem;
+
+    font-weight: 650;
+
+    letter-spacing: 0.11em;
+}
+
+
+.project-content h3 {
+    max-width: 760px;
+
+    font-size:
+        clamp(1.9rem, 3vw, 2.8rem);
+
+    line-height: 1.12;
+
+    letter-spacing: -0.04em;
+
+    font-weight: 600;
+}
+
+
+.project-description {
+    max-width: 710px;
+
+    margin-top: 20px;
+
+    color: var(--secondary);
+}
+
+
+/* ---------- TAGS ---------- */
+
+.tags {
+    margin-top: 24px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.tags span {
+    padding: 5px 9px;
+
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+
+    color: var(--secondary);
+
+    font-size: 0.67rem;
+}
+
+
+/* ---------- MONITORING CURRENT FEATURES ---------- */
+
+.project-current {
+    max-width: 700px;
+
+    margin-top: 35px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.project-current div {
+    padding: 19px 15px;
+}
+
+
+.project-current div + div {
+    border-left: 1px solid var(--border);
+}
+
+
+.project-current small {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--light-text);
+
+    font-size: 0.55rem;
+
+    letter-spacing: 0.1em;
+}
+
+
+.project-current p {
+    font-size: 0.78rem;
+
+    font-weight: 600;
+}
+
+
+.project-planned {
+    max-width: 700px;
+
+    margin-top: 18px;
+
+    color: var(--secondary);
+
+    font-size: 0.75rem;
+}
+
+
+.project-planned strong {
+    color: var(--text);
+}
+
+
+.text-link {
+    display: inline-block;
+
+    margin-top: 27px;
+
+    padding-bottom: 2px;
+
+    border-bottom: 1px solid var(--text);
+
+    font-size: 0.76rem;
+
+    font-weight: 600;
+}
+
+
+.text-link:hover {
+    color: var(--secondary);
+
+    border-color: var(--secondary);
+}
+
+
+/* ==========================================================
+   PROJECT IMAGE
+   ========================================================== */
+
+.project-image {
+    max-width: 850px;
+
+    margin-top: 38px;
+}
+
+
+.project-image img {
+    width: 100%;
+
+    border: 1px solid var(--border);
+}
+
+
+.project-image figcaption {
+    margin-top: 9px;
+
+    color: var(--light-text);
+
+    font-size: 0.65rem;
+}
+
+
+/* ==========================================================
+   TRIAGE PROJECT
+   ========================================================== */
+
+.triage-flow {
+    max-width: 800px;
+
+    margin-top: 35px;
+
+    display: flex;
+
+    align-items: stretch;
+}
+
+
+.triage-flow > div {
+    flex: 1;
+
+    min-height: 115px;
+
+    padding: 17px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+}
+
+
+.triage-flow small {
+    color: var(--light-text);
+
+    font-size: 0.58rem;
+}
+
+
+.triage-flow strong {
+    margin-top: 13px;
+
+    font-size: 0.78rem;
+}
+
+
+.triage-flow div span {
+    margin-top: auto;
+
+    color: var(--secondary);
+
+    font-size: 0.68rem;
+}
+
+
+.arrow {
+    padding: 0 12px;
+
+    align-self: center;
+
+    color: var(--light-text);
+}
+
+
+/* ==========================================================
+   EDUCATION
+   ========================================================== */
+
+.education {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+
+.education h2 {
+    font-size:
+        clamp(2rem, 4vw, 3.2rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+
+    font-weight: 600;
+}
+
+
+.education > div:first-child p {
+    margin-top: 9px;
+
+    color: var(--secondary);
+}
+
+
+.education-meta {
+    text-align: right;
+}
+
+
+.education-meta p {
+    color: var(--secondary);
+
+    font-size: 0.78rem;
+}
+
+
+.education-meta strong {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 0.83rem;
+}
+
+
+/* ---------- COURSEWORK ---------- */
+
+.coursework {
+    margin-top: 65px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.coursework > p {
+    margin-bottom: 20px;
+
+    color: var(--light-text);
+
+    font-size: 0.62rem;
+
+    font-weight: 650;
+
+    letter-spacing: 0.12em;
+}
+
+
+.coursework div {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px 40px;
+}
+
+
+.coursework span {
+    color: var(--secondary);
+
+    font-size: 0.82rem;
+}
+
+
+/* ==========================================================
+   CONTACT
+   ========================================================== */
+
+.contact {
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 135px 30px;
+
+    text-align: center;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.contact h2 {
+    margin-top: 20px;
+
+    font-size:
+        clamp(3.5rem, 7vw, 5.7rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.06em;
+
+    font-weight: 600;
+}
+
+
+.contact > p:not(.section-label) {
+    max-width: 570px;
+
+    margin: 25px auto 30px;
+
+    color: var(--secondary);
+}
+
+
+.contact-socials {
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+
+.contact-socials a {
+    color: var(--secondary);
+
+    font-size: 0.76rem;
+
+    font-weight: 600;
+}
+
+
+.contact-socials a:hover {
+    color: var(--text);
+}
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+footer {
+    max-width: var(--max-width);
+
+    min-height: 90px;
+
+    margin: auto;
+
+    padding: 25px 45px;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    color: var(--light-text);
+
+    font-size: 0.66rem;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        grid-template-columns:
+            auto
+            1fr;
+    }
+
+
+    .nav-space {
+        display: none;
+    }
+
+
+    .nav-links {
+        justify-content: flex-start;
+
+        gap: 22px;
+    }
+
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+
+    .portrait-container {
+        justify-self: start;
+
+        max-width: 420px;
+    }
+
+
+    .about-layout {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .skills {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .education {
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+
+    .education-meta {
+        text-align: left;
+    }
+
+
+    .coursework div {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+
+        min-height: 90px;
+
+        padding: 18px 20px;
+
+        display: flex;
+
+        flex-direction: column-reverse;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .nav-links {
+        width: 100%;
+
+        gap: 16px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .nav-links a {
+        font-size: 0.62rem;
+    }
+
+
+    .hero {
+        min-height: auto;
+
+        padding:
+            65px
+            20px
+            90px;
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(2.8rem, 13vw, 4rem);
+    }
+
+
+    .hero-description {
+        font-size: 0.93rem;
+    }
+
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+
+    .professional-links {
+        flex-wrap: wrap;
+    }
+
+
+    .portrait-container {
+        width: calc(100% - 10px);
+    }
+
+
+    .portrait {
+        height: 450px;
+    }
+
+
+    .section {
+        padding:
+            90px
+            20px;
+    }
+
+
+    .skills {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .project {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        padding: 45px 0;
+    }
+
+
+    .project-current {
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-current div + div {
+        border-left: none;
+
+        border-top: 1px solid var(--border);
+    }
+
+
+    .triage-flow {
+        flex-direction: column;
+    }
+
+
+    .arrow {
+        padding: 8px;
+
+        transform: rotate(90deg);
+    }
+
+
+    .coursework div {
+        grid-template-columns: 1fr;
+    }
+
+
+    .contact {
+        padding:
+            100px
+            20px;
+    }
+
+
+    footer {
+        padding:
+            30px
+            20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+/* ==========================================================
+   PAGE HEADINGS
+   ========================================================== */
+
+.page-heading {
+    margin-bottom: 30px;
+
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.06em;
+
+    font-weight: 600;
+}
+
+/* =========================================================
+   SUBTLE PROJECT COLOR ACCENTS
+   ========================================================= */
+
+/* Project cards - very subtle blue tint on hover */
+.project {
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.project:hover {
+    border-color: rgba(56, 189, 248, 0.28);
+    background-color: rgba(56, 189, 248, 0.015);
+}
+
+
+/* Project numbers */
+.project-index {
+    color: rgba(56, 189, 248, 0.55);
+}
+
+
+/* Project category labels */
+.project-category {
+    color: #7dd3fc;
+}
+
+
+/* Technology tags */
+.tags span {
+    border-color: rgba(56, 189, 248, 0.18);
+    background: rgba(56, 189, 248, 0.035);
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.tags span:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    background: rgba(56, 189, 248, 0.07);
+}
+
+
+/* IMPLEMENTED labels */
+.project-current small {
+    color: #4ade80;
+}
+
+
+/* Slight green tint for implemented feature boxes */
+.project-current > div {
+    border-color: rgba(74, 222, 128, 0.14);
+    background: rgba(74, 222, 128, 0.018);
+}
+
+
+/* Planned feature box */
+.project-planned {
+    border-left: 2px solid rgba(56, 189, 248, 0.55);
+    background: rgba(56, 189, 248, 0.025);
+}
+
+.project-planned strong {
+    color: #7dd3fc;
+}
+
+
+/* Project screenshots */
+.project-image img {
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.project-image:hover img {
+    border-color: rgba(56, 189, 248, 0.32);
+}
+
+
+/* Screenshot captions */
+.project-image figcaption {
+    color: rgba(148, 163, 184, 0.9);
+}
+
+
+/* Repository link */
+.project-content .text-link {
+    color: #7dd3fc;
+}
+
+.project-content .text-link:hover {
+    color: #bae6fd;
+}
+
+/* =========================================================
+   PROJECT PAGE — SUBTLE COLOR ACCENTS
+   ========================================================= */
+
+
+/* Smooth interaction for projects */
+.project {
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Very subtle blue tint when hovering over a project */
+.project:hover {
+    border-color: rgba(56, 189, 248, 0.28);
+    background-color: rgba(56, 189, 248, 0.015);
+}
+
+
+/* Project numbers */
+.project-index {
+    color: rgba(56, 189, 248, 0.55);
+}
+
+
+/* PERSONAL PROJECT / ACADEMIC PROJECT labels */
+.project-category {
+    color: #7dd3fc;
+}
+
+
+/* Technology tags */
+.tags span {
+    border-color: rgba(56, 189, 248, 0.18);
+    background: rgba(56, 189, 248, 0.035);
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* Technology tag hover */
+.tags span:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    background: rgba(56, 189, 248, 0.07);
+}
+
+
+/* IMPLEMENTED text */
+.project-current small {
+    color: #4ade80;
+}
+
+
+/* Implemented feature boxes */
+.project-current > div {
+    border-color: rgba(74, 222, 128, 0.14);
+    background: rgba(74, 222, 128, 0.018);
+}
+
+
+/* Planned features box */
+.project-planned {
+    border-left: 2px solid rgba(56, 189, 248, 0.55);
+    background: rgba(56, 189, 248, 0.025);
+}
+
+
+/* Planned label */
+.project-planned strong {
+    color: #7dd3fc;
+}
+
+
+/* Project screenshots */
+.project-image img {
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Slight screenshot highlight on hover */
+.project-image:hover img {
+    border-color: rgba(56, 189, 248, 0.32);
+}
+
+
+/* Screenshot captions */
+.project-image figcaption {
+    color: rgba(148, 163, 184, 0.9);
+}
+
+
+/* GitHub repository link */
+.project-content .text-link {
+    color: #7dd3fc;
+}
+
+
+/* GitHub repository link hover */
+.project-content .text-link:hover {
+    color: #bae6fd;
+}
+
+/* =========================================================
+   HOMEPAGE PROJECT PREVIEW
+   Keeps detailed project content on projects.html
+   ========================================================= */
+
+.project-preview-intro {
+    margin-bottom: 38px;
+}
+
+.project-teaser-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.project-teaser {
+    min-height: 150px;
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    background: rgba(56, 189, 248, 0.025);
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.project-teaser:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.42);
+    background: rgba(56, 189, 248, 0.055);
+}
+
+.project-teaser-number {
+    margin-bottom: 16px;
+
+    color: #7dd3fc;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.project-teaser strong {
+    max-width: 250px;
+
+    font-size: 0.88rem;
+    line-height: 1.35;
+}
+
+.project-teaser small {
+    margin-top: auto;
+    padding-top: 14px;
+
+    color: var(--secondary);
+    font-size: 0.64rem;
+}
+
+.project-page-link {
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   HOUSTON CHRISTIAN UNIVERSITY ACCENT
+   Subtle orange without changing the overall navy design
+   ========================================================= */
+
+.education-section .section-label {
+    color: var(--hcu-orange);
+}
+
+.education-section .section-number {
+    color: rgba(249, 115, 22, 0.58);
+}
+
+.education h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.education h2::after {
+    content: "";
+
+    display: block;
+    width: 72px;
+    height: 2px;
+
+    margin-top: 14px;
+
+    background: var(--hcu-orange);
+    opacity: 0.85;
+}
+
+.education-meta strong {
+    color: var(--hcu-orange);
+}
+
+.education-section .coursework > p {
+    color: rgba(249, 115, 22, 0.82);
+}
+
+
+/* =========================================================
+   RESPONSIVE PROJECT PREVIEW
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .project-teaser-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-teaser {
+        min-height: 120px;
+        border-radius: 18px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .project-teaser {
+        padding: 20px;
+    }
+}
